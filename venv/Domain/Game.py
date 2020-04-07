@@ -20,6 +20,7 @@ class Game:
         self._home_score = 0
         self._away_score = 0
         self._referees = []
+        self._events = {}
 
     """ Setter for main referee object """
 
@@ -137,3 +138,9 @@ class Game:
     def away_team_goal(self):
 
         self._away_score += 1
+
+
+def type_check(obj):
+
+    if type(obj) is not Game:
+        raise TypeError
